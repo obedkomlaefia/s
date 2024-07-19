@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<div class="everyth">
+    <div class="top">
+        <div class="logo">
+            <img src="pngwing.com (5).png" alt="logo">
+            <h1>GES</h1>
+        </div>
+        <div class="logoutt">
+            <button id="log" type="submit">LOGOUT</button>
+        </div>
+    </div>
+    <div class="displayss">
+        <div class="login-container">
+            <form id="login-form">
+                <div class="ms">
+                    <span></span>
+                    <h5>Congratulations on your appointment</h5>
+                </div>
+                <div class="message">
+                    Name: BANORN GODWIN NOYURO <br>
+                    NTC Number: GTLE/OFC/0142/218 <br>
+                    Index Number: ACCE/0120/2019 <br>
+                    Region Posted: ASHANTI REGION <br>
+                    District Posted: OFFINSO NORTH <br>
+                    School Posted: NKENKAASU R/C JHS<br>
+                    <br>
+                    <p>You are requested to inform the Regional Director. in writing by <span>August 7, 2024</span> of your acceptance of this appointment on these terms</p>
+                </div>
+                <button type="button" id="print-button"> <span><i class='bx bxs-lock-alt'></i></span>Print Appointment Letter</button>
+            </form>
+            <div id="loading" class="loading-hidden">Loading...</div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('print-button').addEventListener('click', function() {
+            var loadingElement = document.getElementById('loading');
+            loadingElement.classList.remove('loading-hidden');
+            loadingElement.classList.add('loading-visible');
+
+            // Simulate loading process (e.g., 3 seconds)
+            setTimeout(function() {
+                loadingElement.classList.remove('loading-visible');
+                loadingElement.classList.add('loading-hidden');
+            }, 10000);
+        });
+    });
+</script>
+</body>
+</html>
